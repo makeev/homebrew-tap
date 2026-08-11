@@ -1,25 +1,25 @@
 class AlphaiTui < Formula
   desc "Terminal stock dashboard: live quotes and charts plus AI-scored financial news and SEC Form 4 insider activity from AlphaAI"
   homepage "https://alphai.io"
-  version "0.12.0"
+  version "0.13.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.12.0/alphai-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "d9573e4cafd9a98852a669da9bcf6381218a8e9d39ee6e5993568399b2ef15f9"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.13.0/alphai-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "bb1cce4e20d872584dc8dfd5ea4305e5debf0fa441e73424f072b65416d3c96b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.12.0/alphai-tui-x86_64-apple-darwin.tar.xz"
-      sha256 "578ed9935ffc3b85a0b6985775fdeadd02d7f1f911e8e7bb19c6a6207a486cd2"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.13.0/alphai-tui-x86_64-apple-darwin.tar.xz"
+      sha256 "9cc59c08b8f6bd53e153ce40b5939ebe57d48637377d6f58dd387a621941128c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.12.0/alphai-tui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8e71b0e83f4d786d3ebb09158aab4b6520566406e1611ecebd4f961066208170"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.13.0/alphai-tui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1d9275f28d2ada1392e08b4506c810a9a2ef0e00436ccc14a85aaa7b1da04e54"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.12.0/alphai-tui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "82d19bb00554a76b74141e6223cca18ec7930db7688c0fcc63155a564bf1ff67"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.13.0/alphai-tui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1e32eccf855c0743ef2173d10d78712f8fc2b14fcdaf3efd7fdbc2b5df0292da"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class AlphaiTui < Formula
   end
 
   def install
-    bin.install "alphai-tui" if OS.mac? && Hardware::CPU.arm?
-    bin.install "alphai-tui" if OS.mac? && Hardware::CPU.intel?
-    bin.install "alphai-tui" if OS.linux? && Hardware::CPU.arm?
-    bin.install "alphai-tui" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "alphai-tui"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "alphai-tui"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "alphai-tui"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "alphai-tui"
+    end
 
     install_binary_aliases!
 
