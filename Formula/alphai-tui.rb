@@ -1,25 +1,25 @@
 class AlphaiTui < Formula
-  desc "Terminal stock dashboard: live quotes and charts plus AI-scored financial news and SEC Form 4 insider activity from AlphaAI"
+  desc "Terminal stock dashboard: live quotes and charts plus AI-scored financial news and SEC Form 4 insider activity from AlphAI"
   homepage "https://alphai.io"
-  version "0.22.0"
+  version "0.22.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.22.0/alphai-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "adeaf44eab37582638b41a709f2997f9c42f927a0d0633b6cad9aeb247539d07"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.22.1/alphai-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "6c41bcfae1bf973211e5e40805bdf716bd08e6e2d191580fae21405779887294"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.22.0/alphai-tui-x86_64-apple-darwin.tar.xz"
-      sha256 "19cc76d25dae2b5420879c18999712baae352f5765ffb110ddad6c10af4409a9"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.22.1/alphai-tui-x86_64-apple-darwin.tar.xz"
+      sha256 "da9efa462c56f45b4cc5155e3a379399ab75db5b35d4098918fa8fb5d88d3396"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.22.0/alphai-tui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "beb05b6a0cb39aafb1b6b0522a859f0822d4a6707ec64e467cdf469d6776ca75"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.22.1/alphai-tui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "576678f7893f126fdb00eed230d010b58820f8a2295621562b66752933d94b97"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.22.0/alphai-tui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9cb1de0b190f0886f505320e547c1717654f611b2453833b4e559bd23edd0d4e"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.22.1/alphai-tui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "252eb9cf90e7dff66f203970b5a1e7ebbc4079d73cad95eae71bd12c7021eb30"
     end
   end
   license "MIT"
