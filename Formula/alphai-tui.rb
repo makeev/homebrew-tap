@@ -1,25 +1,25 @@
 class AlphaiTui < Formula
   desc "Terminal stock dashboard: live quotes and charts plus AI-scored financial news and SEC Form 4 insider activity from AlphAI"
   homepage "https://alphai.io"
-  version "0.29.0"
+  version "0.30.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.29.0/alphai-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "734acfa6172c5f5af152ac4e652abe53a71dedf60ec6fe2ccb1f5c7f3aa5ced2"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.30.0/alphai-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "c74403ff4e6050c40394eba80e51c316451775da05a29ae08f8336e5150a851e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.29.0/alphai-tui-x86_64-apple-darwin.tar.xz"
-      sha256 "3e9eff16b8c0c34049f969add5ed73e96d2e0ddd4686204cba1762db64c7bd5e"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.30.0/alphai-tui-x86_64-apple-darwin.tar.xz"
+      sha256 "697bed1aa84c254b6ed1de9e94f1b5f70ad4d5422f739a341e9cb0638adfe3ce"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.29.0/alphai-tui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e762bcab72778cbd40afaabdb466647537639f8c62b0fca03d28f3a7e35a1954"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.30.0/alphai-tui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4fba8cd6f393fb37e0c0c15fe2fa822dcdadd7b415e823e7f29294a70aa0489e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/makeev/alphai-tui/releases/download/v0.29.0/alphai-tui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "93499057d46ec63bd50aa79e7fee42ab12822712f6690e5bfe997c63888dfb5e"
+      url "https://github.com/makeev/alphai-tui/releases/download/v0.30.0/alphai-tui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c17c90ddb72ad83798b7b9fc1dbef746a89c4be099477b34530cfdcc15780cbc"
     end
   end
   license "MIT"
